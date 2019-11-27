@@ -442,7 +442,7 @@ int main(int argc, char **argv)
 
     // Enable Experimantal Topics
     bool experimental_topics;
-    nh.param<bool>("experimental_topics", experimental_topics, false);
+    nh.param<bool>("experimental_topics", experimental_topics, true);
 
     bool keep_connected;
     nh.param<bool>("keep_connected", keep_connected, false);

@@ -23,6 +23,8 @@ THE SOFTWARE.
 */
 
 #include "WHILL.h"
+#include <iostream>
+#include <cmath>
 #include <stdio.h>
 
 void WHILL::startSendingData0(unsigned int interval_ms,unsigned char speed_mode){
@@ -143,7 +145,7 @@ void WHILL::setSpeed(float linear,  float angular)
     x = x > 100 ? 100 : x;
     x = x < -100 ? -100 : x;
 
-    unsigned char payload[] = {0x08, // Experimental Command, Control with Low Jerk, Almost Const-Accel control
+    unsigned char payload[] = {0x03, // Experimental Command, Control with Low Jerk, Almost Const-Accel control
                                0x00, 
                                (unsigned char)(char)(y),
                                (unsigned char)(char)(x)};
